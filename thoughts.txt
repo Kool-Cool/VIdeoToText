@@ -1,0 +1,6 @@
+1> streamlit app
+2> store live video 
+3> Extract the Audio
+4> Audio to Text
+5> Text to English
+
