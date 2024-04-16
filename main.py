@@ -2,7 +2,14 @@ import streamlit as st
 import cv2
 from PIL import Image
 import os
+import speech_recognition as sr
+from googletrans import Translator
+from pydub import AudioSegment
 
+
+
+
+""" -----  STRAMLIT SETUP ----- """
 st.write('''
 THIS IS IT !!
 

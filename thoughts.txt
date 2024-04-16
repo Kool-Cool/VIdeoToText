@@ -4,9 +4,26 @@
             ii) record file
             iii) Demo file
     |- file path
+
+
 2> store live video 
+
+
 3> Extract the Audio
+    |- audio file has  background music too and sometimes sound effects and long pauses
+
+        |s1] isolating vocals and removing background music (spleeter or pretrained hugging face)
+        |s2] removing sound effects (noicereduce)
+        |s3] spliiting audio in small (for long pauses)
+        
+
+
 4> Audio to Text
+    |- Accuracy of transcription will depend on quality of audio and clarity of the speech !!
+    |- Using Noice Reduction , speech_recognition
+    |- translation
+
+
 5> Text to English
 
 
