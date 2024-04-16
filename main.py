@@ -1,6 +1,7 @@
 import streamlit as st
 import cv2
 import os
+import tempfile
 from converter import mytext
 
 
@@ -23,7 +24,7 @@ if uploaded_video is not None:
     tfile = tempfile.NamedTemporaryFile(delete=False) 
     tfile.write(uploaded_video.read())
     
-    vf = cv.VideoCapture(tfile.name)
+    vf = cv2.VideoCapture("outputs/output.mp4")  
 
 
 
@@ -82,12 +83,18 @@ get_tran = st.button("Get Transcript")
 
 if get_tran:
     tran = mytext('outputs/output.mp4')
-    st.write(tran)
+    st.write("tran")
 
 
 
 st.title('''
 Watch Demo !?
 ''')
+st.markdown("[Tere Hawale Arijit Singh](https://youtube.com/shorts/pRyQQ0imjWc?si=-m3DCiQGuDsvCGfH)")
+exp1 = st.button("Example")
+if exp1:
+    tran_exp1 = mytext(r"demo/Tere Hawale 2nd Version (Without Music) _ Arijit Singh.mp4")
+    st.write("tran_exp1")
+
 
 
