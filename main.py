@@ -1,10 +1,7 @@
 import streamlit as st
 import cv2
-from PIL import Image
 import os
-import speech_recognition as sr
-from googletrans import Translator
-from pydub import AudioSegment
+from converter import mytext
 
 
 
@@ -80,7 +77,17 @@ if os.path.exists('outputs/output.mp4'):
     file_size_MB = os.path.getsize('outputs/output.mp4') / (1024 * 1024)  # Convert bytes to MB
     st.write(f"Current file size: {file_size_MB:.2f} MB")  # Display the file size
 
+
+get_tran = st.button("Get Transcript")
+
+if get_tran:
+    tran = mytext('outputs/output.mp4')
+    st.write(tran)
+
+
+
 st.title('''
 Watch Demo !?
 ''')
+
 
