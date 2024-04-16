@@ -1,6 +1,30 @@
 1> streamlit app
+    |- setting up for 
+        |-  i) file upload
+            ii) record file
+            iii) Demo file
+    |- file path
 2> store live video 
 3> Extract the Audio
 4> Audio to Text
 5> Text to English
 
+
+
+To develop a video recording app using Python that allows users to record in Hindi, 
+with the output converted to English text for chat purposes. 
+The app should have the following key features:
+
+Language Support: The app should support recording in Hindi, with the output converted to English text for chat.
+
+
+Storage Limit: The maximum data storage for recorded videos should not exceed 100 MB.
+
+
+Camera: The app should utilize the phone’s camera for recording videos.
+
+
+Video Submission: Please submit three videos in vertical format, similar to Snapchat, for review. These videos should showcase the app’s functionality and user interface.
+
+
+Web Dashboard: The videos must be stored on a web dashboard. The dashboard should be simple and easy to use, allowing for easy access and management of the recorded videos.
