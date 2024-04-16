@@ -82,7 +82,7 @@ if os.path.exists('outputs/output.mp4'):
 get_tran = st.button("Get Transcript")
 
 if get_tran:
-    tran = mytext('outputs/output.mp4')
+    tran = mytext(r'outputs/output.mp4')
     st.write("tran")
 
 

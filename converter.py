@@ -29,7 +29,8 @@ def mytext(vid_path):
     audio_clip.write_audiofile(audio_file_path)
 
 
-    command = f"whisper {audio_file_path} --model medium"
+    command = f"whisper {audio_file_path} --model medium > output_audio.txt"
+
 
     process = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, universal_newlines=True)
 
@@ -37,12 +38,12 @@ def mytext(vid_path):
     output = process.stdout
     # Initialize the translator
     translator = Translator()
-
+    print(output)
     # Open the file and read its contents
-    with open('/content/output_audio (1).txt', 'r') as tr:
+    with open('output_audio.txt', 'r') as tr:
         text = tr.read()
 
-    translation = translator.translate(text, dest='en',src = 'ur')
+    translation = translator.translate(text, dest='en')
 
     print("Translation:", translation.text)
     return translation.text
